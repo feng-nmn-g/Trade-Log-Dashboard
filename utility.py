@@ -223,7 +223,7 @@ def show_daily_PL_cum_PL_curve(dataframe):  # need to use PL type dataframe
         ),
     )
     with st.container(border=True):
-        st.plotly_chart(fig, use_container_width=False)
+        st.plotly_chart(fig, width="content")
 
 
 def show_PL_DD_plot(dataframe, starting_fund):  # need to use PL type dataframe. Starting fund used for PL %
@@ -315,7 +315,7 @@ def show_PL_DD_plot(dataframe, starting_fund):  # need to use PL type dataframe.
         ),
     )
     with st.container(border=True):
-        st.plotly_chart(fig, use_container_width=False)
+        st.plotly_chart(fig, width="content")
         # some notes (inside the container)
         st.caption(
             "_Note: The Drawdown is calculated based starting fund instead of recent PL max._", text_alignment="center"
@@ -348,7 +348,7 @@ def show_PL_per_strategy_bar_chart(dataframe):
         # legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="center", x=0.5),
     )
     with st.container(border=True):
-        st.plotly_chart(fig, use_container_width=False)
+        st.plotly_chart(fig, width="content")
 
 
 def show_open_date_per_strategy(dataframe):
@@ -382,7 +382,7 @@ def show_open_date_per_strategy(dataframe):
         # legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="center", x=0.5),
     )
     with st.container(border=True):
-        st.plotly_chart(fig, use_container_width=False)
+        st.plotly_chart(fig, width="content")
 
 
 def show_daily_PL_distribution_daily_trades(dataframe, starting_fund):  # need to use PL type dataframe
@@ -434,5 +434,5 @@ def show_daily_PL_distribution_daily_trades(dataframe, starting_fund):  # need t
     )
     with st.container(border=True):
         col1, col2 = st.columns(2)
-        col1.plotly_chart(fig_dailyPL, use_container_width=False)
-        col2.plotly_chart(fig_dailytrades, use_container_width=False)
+        col1.plotly_chart(fig_dailyPL, width="content")
+        col2.plotly_chart(fig_dailytrades, width="content")
